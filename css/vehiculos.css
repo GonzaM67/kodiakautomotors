@@ -1,0 +1,265 @@
+/* ============================== CONTENIDO PRINCIPAL ==================================== */
+
+/* Reglas general */
+
+.pagina-vehiculos {
+    font-family: 'Bebas Neue', sans-serif;
+}
+.pagina-vehiculos .main-vehiculos {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 50px; 
+    padding-bottom: 60px;
+}
+.pagina-vehiculos .vehiculos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagina-vehiculos .vehiculos-header h1 {
+     font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #182c17; 
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+.pagina-vehiculos .vehiculos-header h1::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #182c17;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+.pagina-vehiculos .vehiculos-header h1:hover {
+    color: #b51200;
+    transition: 0.3s ease;
+}
+.pagina-vehiculos .vehiculos-header p {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #182c17;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Tarjeta contenedora del vehiculo */
+
+.pagina-vehiculos .vehiculo-card {
+    max-width: 1400px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 30px;
+    background-color: #122211;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.pagina-vehiculos .vehiculo-galeria {
+    width: 100%;
+    overflow: hidden;
+
+}
+.pagina-vehiculos .vehiculo-galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.pagina-vehiculos .vehiculo-card:hover .vehiculo-galeria img {
+    transform: scale(1.05);
+}
+
+/* Informacion del vehiculo */
+
+.pagina-vehiculos .vehiculo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.pagina-vehiculos .vehiculo-badge {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c0392b;
+    letter-spacing: 1.5px;
+}
+
+.pagina-vehiculos .vehiculo-info h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 5px 0 10px 0;
+    letter-spacing: 1.5px;
+
+}
+.pagina-vehiculos .vehiculo-info h2:hover {
+    color: #c0392b;
+    transition: color 0.3s ease;
+}
+.pagina-vehiculos .vehiculo-desc {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.pagina-vehiculos .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+}
+.pagina-vehiculos .spec-item {
+    display: flex;
+    flex-direction: column;
+}
+.pagina-vehiculos .spec-label {
+    font-size: 0.85rem;
+    color: #888888;
+    letter-spacing: 1px;
+}
+.pagina-vehiculos .spec-value {
+    font-size: 1.05rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Botones de Accion */
+
+.pagina-vehiculos .vehiculo-acciones {
+    display: flex;
+    gap: 15px;
+}
+.pagina-vehiculos .btn-principal {
+    background-color: #ff3b3b;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+.pagina-vehiculos .btn-principal:hover {
+    background-color: #d62828;
+}
+.pagina-vehiculos .btn-secundario {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.pagina-vehiculos .btn-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* imagen contenedor */
+
+.img-contenedor {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    border-radius: 8px; 
+    background-color: #111; 
+}
+.img-contenedor img.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* MEDIA QUERY PARA TABLETS Y PANTALLAS HASTA (hasta 1200px)*/
+
+@media (max-width: 1200px) and (min-width: 481px) {
+    .pagina-vehiculos .main-vehiculos {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .pagina-vehiculos .vehiculo-card {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .pagina-vehiculos .img-contenedor,
+    .pagina-vehiculos .vehiculo-galeria {
+        height: 300px; 
+    }
+
+    .pagina-vehiculos .img-contenedor img.imagen,
+    .pagina-vehiculos .vehiculo-galeria img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+}
+
+
+/* MEDIA QUERY EXCLUSIVA PARA CELULARES (hasta 480px) */
+
+@media (max-width: 480px) {
+    .pagina-vehiculos .main-vehiculos {
+        width: 92%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .pagina-vehiculos .vehiculo-card {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .pagina-vehiculos .img-contenedor,
+    .pagina-vehiculos .vehiculo-galeria {
+        width: 100%;
+        height: 220px;
+        background-color: #111;
+        overflow: hidden;
+        border-radius: 6px;
+    }
+    .pagina-vehiculos .img-contenedor img.imagen,
+    .pagina-vehiculos .vehiculo-galeria img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+        display: block;
+    }
+    .pagina-vehiculos .vehiculos-header h1 {
+        font-size: 2.3rem;
+    }
+    .pagina-vehiculos .vehiculo-info h2 {
+        font-size: 1.8rem;
+    }
+    .pagina-vehiculos .vehiculo-acciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pagina-vehiculos .vehiculo-acciones .btn-principal,
+    .pagina-vehiculos .vehiculo-acciones .btn-secundario {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
